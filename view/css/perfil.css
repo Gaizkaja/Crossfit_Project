@@ -1,0 +1,128 @@
+html:lang(es) *:lang(eu) {
+    display: none;
+}
+
+html:lang(eu) *:lang(es) {
+    display: none;
+}
+
+nav img {
+    display: block !important;
+    width: 100px;
+    height: 100px;
+}
+
+.profile-nav, .profile-body {
+    margin-top: 10rem !important;
+}
+
+.profile-nav #picture {
+    height: 10rem;
+    width: 10rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+
+.profile-nav a {
+    text-decoration: none;
+}
+
+.profile-nav > span {
+    cursor: pointer;
+    user-select: none;
+}
+
+.selected {
+    background-color: #efefef !important;
+}
+
+.profile-body > div {
+    display: none;
+}
+
+.profile-body .display-4 {
+    font-size: 2.3vw;
+}
+
+#comentariosUsuario h1 {
+    font-size: 3rem;
+    padding: 3rem 0;
+}
+
+.profile-body p,
+.profile-body h2 {
+    font-size: 1.3vw;
+}
+
+.profile-body .input-group-text {
+    width: 120px !important;
+}
+
+/* Clases de cambio de modo */
+
+/* Modo Oscuro */
+body.oscuro {
+    background-color: #000000;
+}
+
+body.oscuro nav, body.oscuro footer {
+    background-color: #0e0e0e !important;
+}
+
+body.oscuro .selected {
+    color: #000000 !important;
+}
+
+body.oscuro .texto, body.oscuro footer dl {
+    color: #ffffff;
+}
+
+/* Modo Claro */
+
+body.claro {
+    background-color: #ffffff;
+}
+
+body.claro nav, body.claro footer {
+    background-color: #e3e2e2 !important;
+}
+
+body.claro .texto, body.claro footer dl {
+    color: #000000;
+}
+
+@media screen and (max-width: 767px) {
+    nav img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .profile-body {
+        margin-top: 2rem !important;
+    }
+
+    .profile-body .display-4 {
+        font-size: 1.2rem;
+    }
+
+    .profile-body p,
+    .profile-body h2 {
+        font-size: 0.6rem;
+    }
+
+    #comentariosUsuario h1 {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+    .profile-nav #picture {
+        height: 6rem;
+        width: 6rem;
+    }
+
+    .profile-nav > span {
+        font-size: 0.8em;
+    }
+}

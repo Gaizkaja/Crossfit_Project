@@ -1,0 +1,246 @@
+/* NAVBAR */
+nav {
+    background-color: #0e0e0e;
+}
+
+.container-fluid > *:nth-child(2):not(.profile-body) {
+    margin-top: 2em !important;
+}
+
+nav img {
+    width: 3vw;
+    height: 5vh;
+}
+/* BUTTON PERFIL */
+.user {
+    position: relative;
+    width: auto;
+}
+
+.userPages {
+    display: none;
+    position: absolute;
+    width: 100px;
+    top: 0;
+    right: -100px;
+    font-size: 1.2vw;
+    background-color: #343a40;
+    z-index: 2;
+}
+
+.userPages * {
+    text-decoration: none;
+    background-color: #343a40;
+    color: #fff !important;
+}
+
+#atletasIco {
+    display: none;
+}
+
+/* GO TOP BUTTON */
+.go-top {
+    position: fixed;
+    bottom: 30px;
+    left: 90%;
+    border: 3px solid rgb(26, 42, 64);
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: white;
+    /*Al principio no se verá, cuando bajemos 500px saldrá*/
+    display: none;
+    overflow-x: hidden;
+    z-index: 10;
+}
+
+/*FOOTER*/
+footer .row {
+    max-width: 80rem !important;
+}
+
+footer,
+.mainTitle {
+    background: #0e0e0e;
+    color: #ffffff;
+    padding: 40px;
+}
+
+footer .row {
+    margin: 0 auto;
+    max-width: 62.5rem;
+    width: 100%;
+}
+
+footer .row .row {
+    margin: 0 -0.9375rem;
+    max-width: none;
+    width: auto;
+}
+
+footer p {
+    font-family: inherit;
+    font-size: 1rem !important;
+    font-weight: normal;
+    line-height: 1.6;
+    margin-bottom: 1.25rem;
+    text-rendering: optimizeLegibility;
+}
+
+footer a {
+    color: #008CBA;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+footer dl {
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem !important;
+    line-height: 1.6;
+    list-style-position: outside;
+    margin-bottom: 1.25rem;
+    width: 200px;
+}
+
+
+.footer-buttons a, .footer-buttons button {
+    width: 120px;
+}
+
+footer dl dt {
+    margin-bottom: 0.3rem;
+    font-weight: bold;
+}
+
+footer dl dd {
+    margin-bottom: 0.75rem;
+}
+
+footer address {
+    display: block;
+    font-style: italic;
+}
+
+/* Tamaño móvil y tablets en general */
+
+@media screen and (max-width: 1000px) {
+    /* NAVBAR */
+    nav a img {
+        display: none;
+    }
+
+    /* BUTTON INICIAR SESION */
+    #logout {
+        color: black !important;
+    }
+
+    .userPages {
+        position: relative;
+        justify-content: center;
+        top: auto;
+        left: auto;
+        right: auto;
+        bottom: auto;
+        width: auto;
+        margin: 1rem 0;
+        background-color: transparent;
+    }
+
+    .userPages button, .userPages a {
+        background-color: #fff;
+        color: #000 !important;
+        flex-basis: 10%;
+    }
+
+    .btn-light {
+        width: 100px;
+        align-self: center;
+        margin-bottom: 5px;
+    }
+
+    /* BUTTONS NAVBAR */
+    .nav-item {
+        justify-content: center;
+    }
+
+    .enlaces {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .enlaces a {
+        width: max-content;
+        padding: 5px;
+        margin: 5px;
+    }
+}
+
+/* Tamaño móvil en específico */
+
+@media (max-width: 768px) {
+    /* FOOTER */
+    footer,
+    footer p,
+    footer dl,
+    .footer-buttons button,
+    .footer-buttons a {
+        font-size: 2vw !important;
+    }
+
+    .footer-buttons button {
+        padding: 1vw 1vh;
+    }
+
+    .footer-buttons a, .footer-buttons button {
+        width: 100px;
+    }
+    #commentNotAuth {
+        font-size: 1.45vw;
+    }
+    /* GO TOP BUTTON */
+    .go-top {
+        left: 85%;
+    }
+
+    .go-top img {
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* Se aplica en modo escritorio, esto es lo referente al hover del usuario */
+
+@media screen and (min-width: 1001px) {
+    
+    /* BUTTON USUARIO LOGUEADO */
+    .user:hover .userPages:not(.notAuth) {
+        display: block !important;
+    }
+
+    .userPages .esquina {
+        position: absolute;
+        top: 35%;
+        left: -5px;
+        background-color: #343a40;
+        height: 20px;
+        width: 20px;
+        transform: rotate(45deg);
+        z-index: 1;
+    }
+
+    .userPages a, .userPages button {
+        position: relative;
+        z-index: 2;
+    }
+
+    .userPages button:hover,
+    .userPages a:hover {
+        background-color: #2d3139;
+    }
+}
